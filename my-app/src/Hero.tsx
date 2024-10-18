@@ -7,9 +7,12 @@ function Hero(){
 
   return (
     <>
-    <h3>Name: {name}</h3>
-    <h3>Title: {title}</h3>
-    <p>Intro: {intro} </p>
+    <div className="userContainer">
+      <h3>Name: {name}</h3>
+      <h3>Title: {title}</h3>
+      <p>Intro: {intro} </p>
+    </div>
+
     </>
   )
 }

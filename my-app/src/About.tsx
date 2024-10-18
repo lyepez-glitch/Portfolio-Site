@@ -11,27 +11,32 @@ function About(){
     const [backgrounds,setBackgrounds] = useState<string[]>([])
   return (
     <>
-    <h3>About:{bio}</h3>
-    <ul>
-      <li><FaReact /> React</li>
-    </ul>
-    <ul>
-      Certs:
-      {
-        certs.map(cert=>
-          <li>{cert.title}</li>
-          )
-      }
+    <div className="aboutContainer">
+      <h3>About:</h3>
+      <p>{bio}</p>
+      <ul>
+        <li><FaReact /> React</li>
+      </ul>
+      <ul>
+        Certs:
+        {
+          certs.map(cert=>
+            <li>{cert.title}</li>
+            )
+        }
 
-    </ul>
-    <ul>
-      Background:
-      {
-        backgrounds.map(background=>
-          <li>{background}</li>
-          )
-      }
-    </ul>
+      </ul>
+      <ul>
+        Background:
+        {
+          backgrounds.map(background=>
+            <li>{background}</li>
+            )
+        }
+      </ul>
+
+      </div>
+
     </>
   )
 }

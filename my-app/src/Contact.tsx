@@ -36,18 +36,21 @@ function Contact(){
 
   return(
     <>
-    <h3>I would love to hear from you! Whether you have questions, ideas, or just want to chat about tech, feel free to reach out.</h3>
-    <div>Email:{email}</div>
-    <Link to={linkedIn}>LinkedIn</Link>
-    <Link to={github}>GitHub</Link>
-    <form onSubmit={handleContactSubmit}>
-      <label htmlFor="name">Name: </label>
-      <input onChange={(e)=>setName(e.target.value)} value={name} type="text" name="name"/>
-      <label htmlFor="number">Phone Number: </label>
-      <input onChange={(e)=>setNumber(e.target.value)} value={number} type="text" name="number"/>
-    <button type="submit">Contact</button>
-  </form>
-  {showSuccess && <div className="success-flash">Form successfully submitted!</div>}
+    <div className="contactContainer">
+      <h3>I would love to hear from you! Whether you have questions, ideas, or just want to chat about tech, feel free to reach out.</h3>
+      <div style={{marginBottom:'20px'}}>Email:{email}</div>
+      <Link style={{display:'block'}} to={linkedIn}>LinkedIn</Link>
+      <Link style={{display:'block',marginBottom:'20px'}} to={github}>GitHub</Link>
+      <form onSubmit={handleContactSubmit}>
+        <label htmlFor="name">Name: </label>
+        <input onChange={(e)=>setName(e.target.value)} value={name} type="text" name="name"/>
+        <label style={{display:'block',marginTop:'20px'}} htmlFor="number">Phone Number: </label>
+        <input onChange={(e)=>setNumber(e.target.value)} value={number} type="text" name="number"/>
+      <button style={{display:'block',marginLeft:'170px',marginTop:'20px'}} type="submit">Contact</button>
+    </form>
+    {showSuccess && <div className="success-flash">Form successfully submitted!</div>}
+    </div>
+
 
     </>
   )

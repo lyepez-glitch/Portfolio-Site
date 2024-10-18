@@ -23,24 +23,28 @@ function Project(){
   return (
     <>
     <Link to="/">Back</Link>
-    {
-      projects.map(proj=>
-        <ul className="card">
-          <li>title:{proj.title}</li>
-          <li>path:<Link to={proj.path}>Click Here</Link></li>
-          <li>description:{proj.desc}</li>
-          <li>Live demo: {proj.demo}</li>
+    <div className = "projectsContainer">
+      {
 
-          {
-            projDetailsId === proj.id?(
-              <ProjectDetail project={proj}/>
-            ):(
-              <li onClick={(e)=>setProjDetailsId(proj.id)}>View Project Details</li>
-            )
-          }
-        </ul>
-      )
-    }
+        projects.map(proj=>
+          <ul className="card">
+            <li>title:{proj.title}</li>
+            <li>path:<Link to={proj.path}>Click Here</Link></li>
+            <li>description:{proj.desc}</li>
+            <li>Live demo: {proj.demo}</li>
+
+            {
+              projDetailsId === proj.id?(
+                <ProjectDetail project={proj}/>
+              ):(
+                <li onClick={(e)=>setProjDetailsId(proj.id)}>View Project Details</li>
+              )
+            }
+          </ul>
+        )
+      }
+    </div>
+
     </>
 
   )

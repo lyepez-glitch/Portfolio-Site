@@ -15,11 +15,19 @@ type ProjDetailProps = {
 function ProjectDetail({project}:ProjDetailProps){
   return (
     <>
-    <div>Challenges:{project.challenges}</div>
-    <div>Tech used:{project.techUsed}</div>
-    <div>Features:{project.features}</div>
-    <Link to={project.demo}>View demo</Link>
-    <Link to={project.viewCode}>View Code</Link>
+    <div className="projDetailsContainer">
+      <div>Challenges:{project.challenges}</div>
+      <br/>
+      <div>Tech used:{project.techUsed}</div>
+      <br/>
+      <div>Features:{project.features}</div>
+      <br/>
+      <Link to={project.demo}>View demo</Link>
+      <br/>
+      <br/>
+      <Link to={project.viewCode}>View Code</Link>
+    </div>
+
     </>
 
   )
